@@ -5,7 +5,10 @@ function Boton () {
     return (
             <>
                 <div className="p-2">
-                    <p className="h2">Botones</p>
+                <h3>
+                    Botones principales 
+                    <small className="text-muted"> ( uso común )</small>
+                    </h3>
                 </div>
                 <div className="p-2">
                     <div className="d-flex flex-row mb-3">

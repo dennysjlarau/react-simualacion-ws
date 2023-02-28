@@ -2,7 +2,9 @@
 
 function LoginPage () {
     return (
-            <h1>Página número LOGIN</h1>
+            <>
+                <h1>Página número LOGIN</h1>
+            </>  
         )
 }
 
