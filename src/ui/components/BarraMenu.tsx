@@ -20,22 +20,21 @@ function BarraMenu() {
                     <div className="offcanvas-body">
                         <ul className="navbar-nav justify-content-end flex-grow-1 pe-3">
                             <li className="nav-item">
-                                <NavLink className="nav-link" to="/">Inicio</NavLink>
+                                <NavLink className="nav-link" to="/principal">Inicio</NavLink>
                             </li>
                             <li className="nav-item dropdown">
                                 <a className="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                     Opciones
                                 </a>
                                 <ul className="dropdown-menu dropdown-menu-dark">
-                                    <li><NavLink className="dropdown-item" to="/">Catálogos</NavLink></li>
-                                    <li><NavLink className="dropdown-item" to="/">Configuraciones</NavLink></li>
+                                    <li><NavLink className="dropdown-item" to="/catalogos">Catálogos</NavLink></li>
+                                    <li><NavLink className="dropdown-item" to="/configuraciones">Configuraciones</NavLink></li>
                                     <li><hr className="dropdown-divider"/></li>
                                     <li><NavLink className="dropdown-item" to="/guia-estilos">Guía de Estilos</NavLink></li>
                                 </ul>
                             </li>
-                            <li><hr className="dropdown-divider"/></li>
                             <li className="nav-item">
-                                <NavLink className="nav-link" to="/login">Salir</NavLink>
+                                <NavLink className="nav-link link text-primary" to="/login">Salir</NavLink>
                             </li>
                         </ul>
                     </div>
