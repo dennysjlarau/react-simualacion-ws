@@ -1,10 +1,19 @@
+import { useNavigate } from "react-router-dom";
 
 
 function LoginPage () {
+    const navigate = useNavigate();
+    const onLogin = () => {
+        navigate('/', {
+            replace: true
+        })
+    }
     return (
-            <>
-                <h1>Página número LOGIN</h1>
-            </>  
+            <div className="container mt-5">
+                <h1>Login</h1>
+                <hr />
+                <button className="btn btn-primary" onClick={ onLogin }>Login</button>
+            </div>
         )
 }
 

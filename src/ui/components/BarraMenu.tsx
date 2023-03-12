@@ -1,13 +1,22 @@
-import { Link, NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 
 
 function BarraMenu() {
+    const navigate = useNavigate();
+    const onLogout = () => {
+        navigate('/login', {
+            replace: true
+        });
+    }
     return (
         <nav className="navbar navbar-dark bg-dark fixed-top">
             <div className="container-fluid">
                 <div className="navbar-brand">
                     <span>SiMulación-WS </span>
                     <span> <img src="../public/donkey.svg" alt="Logo" width="30" height="24" className="d-inline-block align-text-top"/></span>
+                </div>
+                <div className="navbar-brand ms-auto text-end">
+                    <span className="text-primary">Dennys Lara</span>
                 </div>
                 <button className="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar">
                     <span className="navbar-toggler-icon"></span>
@@ -34,7 +43,7 @@ function BarraMenu() {
                                 </ul>
                             </li>
                             <li className="nav-item">
-                                <NavLink className="nav-link link text-primary" to="/login">Salir</NavLink>
+                                <button className="nav-link link btn btn-link text-primary" onClick={ onLogout }>Salir</button>
                             </li>
                         </ul>
                     </div>
