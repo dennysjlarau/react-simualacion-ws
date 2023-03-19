@@ -1,7 +1,11 @@
+import { useContext } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
+import { AuthContext } from "../../auth/context/AuthContext";
 
 
 function BarraMenu() {
+    const { sesion } = useContext( AuthContext );
+    console.log('sesion: ', sesion);
     const navigate = useNavigate();
     const onLogout = () => {
         navigate('/login', {
@@ -16,7 +20,7 @@ function BarraMenu() {
                     <span> <img src="../public/donkey.svg" alt="Logo" width="30" height="24" className="d-inline-block align-text-top"/></span>
                 </div>
                 <div className="navbar-brand ms-auto text-end">
-                    <span className="text-primary">Dennys Lara</span>
+                    <span className="text-primary">{ sesion?.usuario?.nombre_usr }</span>
                 </div>
                 <button className="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar">
                     <span className="navbar-toggler-icon"></span>
