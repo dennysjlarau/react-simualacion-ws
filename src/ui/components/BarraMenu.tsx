@@ -4,10 +4,11 @@ import { AuthContext } from "../../auth/context/AuthContext";
 
 
 function BarraMenu() {
-    const { sesion } = useContext( AuthContext );
+    const { sesion, logout } = useContext( AuthContext );
     console.log('sesion: ', sesion);
     const navigate = useNavigate();
     const onLogout = () => {
+        logout();
         navigate('/login', {
             replace: true
         });
