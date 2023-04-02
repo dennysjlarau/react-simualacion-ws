@@ -13,7 +13,7 @@ type AuthProps = {
 const init = () => {
     const usuario = JSON.parse(localStorage.getItem('usuario'));
     return {
-        autenticado: !!usuario,
+        autenticado: !!usuario, 
         usuario: usuario 
     } 
 }
